@@ -8,21 +8,25 @@ addBtn.addEventListener('click', () => {
 
 const myLibrary = [];
 
-function Book(title, author, pages, read) {
-	this.title = title;
-	this.author = author;
-	this.pages = pages;
-	this.read = read;
+class Book {
+
+	constructor(title, author, pages, read) {
+		this.title = title;
+		this.author = author;
+		this.pages = pages;
+		this.read = read;
+	}
+
+	info() {
+		const readString = (this.read)? 'already read' : 'not read yet';
+		return `${this.title} by ${this.author}, ${this.pages} pages, ${readString}`;
+	}
+
+	toggleRead() {
+		this.read = !this.read;
+	}
+
 }
-
-Book.prototype.info = function() {
-	const readString = (this.read)? 'already read' : 'not read yet';
-	return `${this.title} by ${this.author}, ${this.pages} pages, ${readString}`;
-};
-
-Book.prototype.toggleRead = function() {
-	this.read = !this.read;
-};
 
 function addBookToLibrary(e) {
 	e.preventDefault();
