@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>TODO</title>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <button id="add-btn">NEW BOOK</button>
+    <form id="add-form" onsubmit="addBookToLibrary(event)" style="display:none;">
+      <h2>Add Book</h2>
+      <div>
+        <label for="title">Title</label>
+        <input id="title" type="text">
+      </div>
+      <div>
+        <label for="author">Author</label>
+        <input id="author" type="text">
+      </div>
+      <div>
+        <label for="pages">Pages</label>
+        <input id="pages" type="number">
+      </div>
+      <div>
+        <label for="read">Read?</label>
+        <input id="read" type="checkbox">
+      </div>
+      <button type="submit">Add</button>
+    </form>
+    <h2>My Library</h2>
+    <div id="books"></div>
+  </body>
+</html>
