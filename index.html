@@ -1,33 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>TODO</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
     <script src="script.js" defer></script>
   </head>
   <body>
-    <button id="add-btn">NEW BOOK</button>
-    <form id="add-form" onsubmit="addBookToLibrary(event)" style="display:none;">
-      <h2>Add Book</h2>
-      <div>
+    <button id="add-btn">Add Book</button>
+    <form
+      id="add-form"
+      onsubmit="addBookToLibrary(event)"
+      style="display: none"
+    >
+      <div id="form-grid">
         <label for="title">Title</label>
-        <input id="title" type="text">
-      </div>
-      <div>
+        <input id="title" type="text" required />
+
         <label for="author">Author</label>
-        <input id="author" type="text">
-      </div>
-      <div>
+        <input id="author" type="text" required />
+
         <label for="pages">Pages</label>
-        <input id="pages" type="number">
-      </div>
-      <div>
+        <input id="pages" type="number" required />
+
         <label for="read">Read?</label>
-        <input id="read" type="checkbox">
+        <input id="read" type="checkbox" />
       </div>
-      <button type="submit">Add</button>
+      <button type="submit">Submit</button>
     </form>
-    <h2>My Library</h2>
-    <div id="books"></div>
+    <div id="library">
+      <h2>My Library</h2>
+      <div id="books"></div>
+    </div>
   </body>
 </html>
